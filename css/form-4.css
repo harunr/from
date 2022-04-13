@@ -1,0 +1,411 @@
+.jDropdownWG {
+    position: relative;
+    z-index: 9
+}
+
+.jDropdownWG-toggler.isLocked {
+    cursor: auto
+}
+
+.jDropdownWG:not(:hover) .jDropdownWG-dropdown-popover {
+    display: none
+}
+
+.jDropdownWG-dropdown-popover {
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    left: 0;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background: #2c3245;
+    border-radius: 4px;
+    padding: 0.5rem 1.5rem 0.5rem 3.125rem;
+    min-height: 4rem;
+    max-width: 90vw;
+    font-family: sans-serif;
+    line-height: 1.25rem
+}
+
+.jDropdownWG-dropdown-popover-primary {
+    color: #ffffff;
+    font-size: 0.875rem
+}
+
+.jDropdownWG-dropdown-popover-secondary {
+    color: #adb9da;
+    font-size: 0.75rem
+}
+
+.jDropdownWG-dropdown-popover::before {
+    content: "i";
+    height: 1.25rem;
+    width: 1.25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 1.5625rem;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #2f90ff;
+    color: #ffffff;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    line-height: 0.75rem;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center
+}
+
+.jDropdownWG-wrapper {
+    width: 85vw;
+    height: 60vh;
+    background-color: #2c3245;
+    max-width: 380px;
+    max-height: 320px;
+    border-radius: 4px;
+    overflow: auto;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    position: absolute;
+    -webkit-align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-family: "Circular Std", "Work Sans Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    z-index: 9999
+}
+
+.jDropdownWG-wrapper.isCardForm {
+    top: -330px
+}
+
+.jDropdownWG-wrapper.isClose {
+    display: none
+}
+
+.jDropdownWG-wrapper.isPropertiesPanel {
+    width: 100%;
+    max-width: 380px;
+    background-color: #30343a
+}
+
+.jDropdownWG-wrapper.isPropertiesPanel::-webkit-scrollbar {
+    -webkit-animation: none 0s ease 0s 1 normal none running !important;
+    animation: none 0s ease 0s 1 normal none running !important;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    background: transparent none repeat 0 0 / auto auto padding-box border-box scroll !important;
+    border: medium none currentColor !important;
+    border-collapse: separate !important;
+    border-image: none !important;
+    border-radius: 0 !important;
+    border-spacing: 0 !important;
+    bottom: auto !important;
+    box-shadow: none !important;
+    box-sizing: content-box !important;
+    caption-side: top !important;
+    clear: none !important;
+    clip: auto !important;
+    color: #000 !important;
+    -webkit-columns: auto !important;
+    columns: auto !important;
+    -webkit-column-count: auto !important;
+    column-count: auto !important;
+    -webkit-column-fill: balance !important;
+    column-fill: balance !important;
+    grid-column-gap: normal !important;
+    -webkit-column-gap: normal !important;
+    column-gap: normal !important;
+    -webkit-column-rule: medium none currentColor !important;
+    column-rule: medium none currentColor !important;
+    -webkit-column-span: 1 !important;
+    column-span: 1 !important;
+    -webkit-column-width: auto !important;
+    column-width: auto !important;
+    content: normal !important;
+    counter-increment: none !important;
+    counter-reset: none !important;
+    cursor: auto !important;
+    direction: ltr !important;
+    display: inline !important;
+    empty-cells: show !important;
+    float: none !important;
+    font-family: serif !important;
+    font-size: medium !important;
+    font-style: normal !important;
+    font-feature-settings: normal !important;
+    font-variant: normal !important;
+    font-weight: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    height: auto !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+    left: auto !important;
+    letter-spacing: normal !important;
+    list-style: disc outside none !important;
+    margin: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    opacity: 1 !important;
+    orphans: 2 !important;
+    outline: medium none invert !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    padding: 0 !important;
+    page-break-after: auto !important;
+    page-break-before: auto !important;
+    page-break-inside: auto !important;
+    -webkit-perspective: none !important;
+    perspective: none !important;
+    -webkit-perspective-origin: 50% 50% !important;
+    perspective-origin: 50% 50% !important;
+    position: static !important;
+    right: auto !important;
+    tab-size: 8 !important;
+    table-layout: auto !important;
+    text-align: left !important;
+    text-align-last: auto !important;
+    text-decoration: none !important;
+    text-indent: 0 !important;
+    text-shadow: none !important;
+    text-transform: none !important;
+    top: auto !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-transform-origin: 50% 50% 0 !important;
+    transform-origin: 50% 50% 0 !important;
+    -webkit-transform-style: flat !important;
+    transform-style: flat !important;
+    -webkit-transition: none 0s ease 0s !important;
+    transition: none 0s ease 0s !important;
+    unicode-bidi: normal !important;
+    vertical-align: baseline !important;
+    visibility: visible !important;
+    white-space: normal !important;
+    widows: 2 !important;
+    width: auto !important;
+    word-spacing: normal !important;
+    z-index: auto !important;
+    all: initial !important;
+    width: 6px !important
+}
+
+.jDropdownWG-wrapper.isPropertiesPanel::-webkit-scrollbar-thumb {
+    -webkit-animation: none 0s ease 0s 1 normal none running !important;
+    animation: none 0s ease 0s 1 normal none running !important;
+    -webkit-backface-visibility: visible !important;
+    backface-visibility: visible !important;
+    background: transparent none repeat 0 0 / auto auto padding-box border-box scroll !important;
+    border: medium none currentColor !important;
+    border-collapse: separate !important;
+    border-image: none !important;
+    border-radius: 0 !important;
+    border-spacing: 0 !important;
+    bottom: auto !important;
+    box-shadow: none !important;
+    box-sizing: content-box !important;
+    caption-side: top !important;
+    clear: none !important;
+    clip: auto !important;
+    color: #000 !important;
+    -webkit-columns: auto !important;
+    columns: auto !important;
+    -webkit-column-count: auto !important;
+    column-count: auto !important;
+    -webkit-column-fill: balance !important;
+    column-fill: balance !important;
+    grid-column-gap: normal !important;
+    -webkit-column-gap: normal !important;
+    column-gap: normal !important;
+    -webkit-column-rule: medium none currentColor !important;
+    column-rule: medium none currentColor !important;
+    -webkit-column-span: 1 !important;
+    column-span: 1 !important;
+    -webkit-column-width: auto !important;
+    column-width: auto !important;
+    content: normal !important;
+    counter-increment: none !important;
+    counter-reset: none !important;
+    cursor: auto !important;
+    direction: ltr !important;
+    display: inline !important;
+    empty-cells: show !important;
+    float: none !important;
+    font-family: serif !important;
+    font-size: medium !important;
+    font-style: normal !important;
+    font-feature-settings: normal !important;
+    font-variant: normal !important;
+    font-weight: normal !important;
+    font-stretch: normal !important;
+    line-height: normal !important;
+    height: auto !important;
+    -webkit-hyphens: none !important;
+    hyphens: none !important;
+    left: auto !important;
+    letter-spacing: normal !important;
+    list-style: disc outside none !important;
+    margin: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    min-width: 0 !important;
+    opacity: 1 !important;
+    orphans: 2 !important;
+    outline: medium none invert !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    padding: 0 !important;
+    page-break-after: auto !important;
+    page-break-before: auto !important;
+    page-break-inside: auto !important;
+    -webkit-perspective: none !important;
+    perspective: none !important;
+    -webkit-perspective-origin: 50% 50% !important;
+    perspective-origin: 50% 50% !important;
+    position: static !important;
+    right: auto !important;
+    tab-size: 8 !important;
+    table-layout: auto !important;
+    text-align: left !important;
+    text-align-last: auto !important;
+    text-decoration: none !important;
+    text-indent: 0 !important;
+    text-shadow: none !important;
+    text-transform: none !important;
+    top: auto !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-transform-origin: 50% 50% 0 !important;
+    transform-origin: 50% 50% 0 !important;
+    -webkit-transform-style: flat !important;
+    transform-style: flat !important;
+    -webkit-transition: none 0s ease 0s !important;
+    transition: none 0s ease 0s !important;
+    unicode-bidi: normal !important;
+    vertical-align: baseline !important;
+    visibility: visible !important;
+    white-space: normal !important;
+    widows: 2 !important;
+    width: auto !important;
+    word-spacing: normal !important;
+    z-index: auto !important;
+    all: initial !important;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    border-radius: 4px !important
+}
+
+.jDropdownWG-header-wrapper {
+    color: #ffffff;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 90%;
+    margin: 12px 8px 0;
+    padding: 3px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: .3s;
+    -webkit-transform: 0, -100px;
+    transform: 0, -100px
+}
+
+.jDropdownWG-header-input-wrapper {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%;
+    background-color: #2c3245;
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    transition: -webkit-transform 300ms ease-in-out !important;
+    transition: transform 300ms ease-in-out !important;
+    transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out !important;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0
+}
+
+.jDropdownWG-header-input-wrapper.isSticky {
+    -webkit-transform: translate(0);
+    transform: translate(0)
+}
+
+.jDropdownWG-AmPm-Wrapper {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    width: 125px;
+    cursor: pointer
+}
+
+.jDropdownWG-AmPm-toggler-wrapper {
+    width: 43px;
+    height: 24px;
+    background-color: #394157;
+    border: 1px solid #1f2532;
+    border-radius: 24px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    position: relative
+}
+
+.jDropdownWG-AmPm-toggler-ball {
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    transition: right 1s, left 1s
+}
+
+.am-side {
+    left: 3px
+}
+
+.pm-side {
+    right: 3px
+}
+
+
+.formLogoWrapper {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+}
+
+.form-all:before {
+    background: none !important;
+}
+
+.formLogoWrapper.Left {
+    top: -64px;
+    left: 0;
+    text-align: left;
+}

@@ -1,0 +1,6 @@
+@media screen and (max-width: 480px){
+    .form-input-wide[data-layout="half"], .form-input-wide[data-layout="full"], .form-input{width: 100%;}
+    .appointmentDateSelect{ margin-top: 20px;}
+    .jotform-form .appointmentCalendarTimezone {margin-top: 0;}
+    .appointmentFieldWrapper[data-breakpoint=shouldBreakIntoNewLine] .appointmentSlots { height: auto; min-height: auto; }
+}
